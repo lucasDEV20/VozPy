@@ -6,6 +6,7 @@ Created on Sat Nov  9 19:30:35 2019
 import pyttsx3 
 engine = pyttsx3.init()
 cars = ["Ford", "Volvo", "BMW"]
+coisas = ["Ford", "Volvo", "BMW"]
 
 engine.say("ola lucas sou sua assistente, o que posso fazer por você hoje ?")
 
@@ -15,20 +16,22 @@ engine.say("ola lucas sou sua assistente, o que posso fazer por você hoje ?")
 #engine.say("marcar uma reuniao ?")
 #engine.say("tocar uma musica ?")
 
+engine.say("escolha dentre as opçoes")
 
 print('''Choice your number
-[1] Banana
+[1] cars
 [2] Apple ''')
-engine.say("escolha dentre as opçoes")
+
 while True:
     option = int(input('Your option: '))
     if option == 1:
-        engine.say("voce escolheu banana")
-        print('Banana choiced')
+        engine.say("vocÊ escolheu")
+        engine.say(cars)
         break
     elif option == 2:
-        engine.say("voce escolheu maça")
-        print('Apple choiced')
+        engine.say("vocÊ escolheu")
+        engine.say(coisas)
+       
         break
     print('Try again')
 
